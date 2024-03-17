@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <div class="main">
+      <div class="left"><i class="fa-solid fa-chevron-left"></i></div>
+
+      <div class="container">
+        <img src="i2.jpg" alt="images" />
+        <img src="i3.jpg" alt="images" />
+        <img src="i4.jpg" alt="images" />
+        <img src="i5.jpg" alt="images" />
+        <img src="i6.jpg" alt="images" />
+        <img src="i7.jpg" alt="images" />
+      </div>
+      <div class="right"><i class="fa-solid fa-chevron-right"></i></div>
+    </div>
+    <h3>Welcome to wonder land</h3>
+
+    <script>
+      let get_images = document.getElementsByTagName("img");
+      let right = document.querySelector(".right");
+      let left = document.querySelector(".left");
+
+      var flag = 0;
+      get_images[flag].style.display = "block";
+
+      right.addEventListener("click", function () {
+
+
+
+
+
+
+
+        get_images[flag].style.display = "none";
+        flag = flag + 1;
+        if (flag >= get_images.length - 2) {
+          flag = 0;
+        }
+
+        get_images[flag].style.display = "block";
+        
+        
+        
+   
+
+
+
+      });
+
+      left.addEventListener("click", function () {
+        get_images[flag].style.display = "none";
+        flag = flag - 1;
+
+        console.log(flag);
+
+        if (flag < 0) {
+          flag = 4;
+        }
+
+        get_images[flag].style.display = "block";
+      });
+    </script>
+  </body>
+</html>
